@@ -61,7 +61,7 @@ Version **1.1.0** was validated with only Speedtest in its scope on Android 17/A
 
 A speed test completed with both completion flags set and remote ID `-1` in the retained local database. Location, phone, notifications and storage remained denied at the Android level. Mapbox's real native collection getter reported disabled, and maps still rendered.
 
-All **50 unit tests** and **11 Android fixture tests** passed; an additional live test verified the renamed module’s authenticated Binder reply, including class/method renaming, cache invalidation with unchanged version labels, ambiguous matches, overlapping/shadowed split definitions, and forged-status UID rejection. The real module-to-Speedtest Binder path was checked separately through the settings UI. Lint completed with no errors. See the [validation summary](docs/validation.md).
+All **50 unit tests** and **11 Android fixture tests** passed, covering class/method renaming, cache invalidation with unchanged version labels, ambiguous matches, overlapping/shadowed split definitions, and forged-status UID rejection. An additional live test verified the renamed module’s authenticated Binder reply. The real module-to-Speedtest Binder path was checked separately through the settings UI. Lint completed with no errors. See the [validation summary](docs/validation.md).
 
 The earlier native audit found Mapbox's collection flag enabled in 1.0.0. Version 1.0.1 added the actual native disable operation and independent C++ probes confirmed it, including after map use. Version 1.1.0 retains those controls and validates the native HTTP bridge members before installing its guard.
 
